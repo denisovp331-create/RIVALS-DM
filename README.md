@@ -9,10 +9,12 @@ Unofficial community leaderboard concept for Roblox RIVALS Free For All (FFA / D
   - 3–4 gold weapons: gold check
   - 5+ gold weapons: diamond check
 - Screenshot upload and OCR attempt in the browser (Tesseract.js); the detected values must be checked manually.
+- Added a manager review queue with approve/reject actions; only approved submissions affect the local demo leaderboard.
+- OCR attempts to read score, K/D, placement and kills from screenshots; OCR results still require human verification.
 - Record submissions and demo profile choices are stored in the current browser only.
 
 ## Important limitations of the preview
-The current `index.html` is a front-end prototype, not a production account system. Browser storage is not shared between visitors and can be edited, so it is not a trustworthy global leaderboard. The OCR is best-effort and cannot prove that a screenshot is genuine. The badge count in the prototype is not independently verified.
+The current `index.html` is a front-end prototype, not a production account system. The manager panel is not protected by real authentication and is only a local demo: browser storage is not shared between visitors and can be edited, so approvals are not global or secure. The OCR is best-effort and cannot prove that a screenshot is genuine. The badge count in the prototype is not independently verified.
 
 ## To make it a real shared site
 1. Create a **separate Supabase project for RIVALS-DM**. Do not reuse the STAR MARKET project.
